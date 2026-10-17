@@ -1,0 +1,6 @@
+{
+  "name": "Atlas de los Mundos Interiores - Pasaporte Energético",
+  "description": "Una antesala interactiva de Rincón Zen y Camino Wayra para despertar preguntas, explorar símbolos de astrología, Tarot y runas, y completar tu Pasaporte Celestial descargable en PDF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

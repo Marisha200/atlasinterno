@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-display: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0a0d14;
+    color: #f3ede2;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(30, 41, 69, 0.5) 0%, transparent 60%),
+      radial-gradient(circle at 90% 20%, rgba(226, 192, 116, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 10% 80%, rgba(226, 192, 116, 0.04) 0%, transparent 50%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.03em;
+  }
+
+  .font-serif-body {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0d14;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(226, 192, 116, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(226, 192, 116, 0.5);
+}
+
+/* Printable PDF Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+    background-image: none !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+
+  .print-page-break {
+    page-break-before: always;
+  }
+}
